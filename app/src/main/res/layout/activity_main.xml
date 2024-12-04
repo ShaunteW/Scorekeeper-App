@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+
+    >
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_keeper"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/fillerTitle"
+        />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="100sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:layout_below="@+id/Team1EditName"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/fillerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/scoreFillerLeft"
+        android:layout_width="80px"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:layout_below="@+id/Team1EditName"
+        android:layout_toLeftOf="@+id/scoreText"
+        />
+
+    <TextView
+        android:id="@+id/scoreFillerRight"
+        android:layout_width="80px"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:layout_below="@+id/Team1EditName"
+        android:layout_toRightOf="@+id/scoreText"
+        />
+
+    <TextView
+        android:id="@+id/scoreText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="100sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="177dp"
+        tools:layout_editor_absoluteY="418dp"
+        android:layout_below="@+id/Team2EditName"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/increaseButton1"
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/Team1EditName"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="2dp"
+        android:layout_toLeftOf="@+id/scoreFillerLeft"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="Increase"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        android:onClick="playit"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <Button
+        android:id="@+id/increaseButton2"
+        android:layout_width="122dp"
+        android:layout_height="128dp"
+        android:gravity="center"
+        android:text="Increase"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="418dp"
+        android:layout_below="@+id/Team2EditName"
+        android:layout_toLeftOf="@+id/scoreFillerLeft"/>
+
+    <Button
+        android:id="@+id/decreaseButton1"
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:text="Decrease"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="181dp"
+        android:layout_below="@+id/Team1EditName"
+        android:layout_toRightOf="@+id/scoreFillerRight"
+        />
+
+    <Button
+        android:id="@+id/decreaseButton2"
+        android:layout_width="128dp"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:text="Decrease"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="418dp"
+        android:layout_below="@+id/Team2EditName"
+        android:layout_toRightOf="@+id/scoreFillerRight"/>
+
+
+    <TextView
+        android:id="@+id/filler"
+        android:layout_width="wrap_content"
+        android:layout_height="150px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleText"
+        />
+
+    <TextView
+        android:id="@+id/filler2"
+        android:layout_width="wrap_content"
+        android:layout_height="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/scoreText"
+        />
+
+    <EditText
+        android:id="@+id/Team1EditName"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:hint="Home Team:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="-45dp"
+        tools:layout_editor_absoluteY="136dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/filler"
+        />
+
+    <EditText
+        android:id="@+id/Team2EditName"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:hint="Away Team:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="-45dp"
+        tools:layout_editor_absoluteY="136dp"
+        tools:ignore="MissingConstraints"
+        android:layout_below="@+id/filler2"
+        />
+
+
+    <Button
+        android:id="@+id/ResetBtn"
+        android:layout_width="250px"
+        android:layout_height="150px"
+        android:layout_below="@+id/scoreText2"
+        android:layout_centerHorizontal="true"
+        android:text="Reset"
+        android:textSize="45px"
+        android:backgroundTint="@color/black"
+
+/>
+
+
+    <TextView
+        android:id="@+id/timer_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ResetBtn"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="00:00"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        tools:ignore="MissingConstraints"
+
+
+        />
+
+
+    <Button
+        android:id="@+id/start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer_text"
+        android:layout_marginTop="-23dp"
+        android:text="Start Timer"
+        tools:ignore="MissingConstraints"
+        android:backgroundTint="@color/black"
+        />
+
+    <Button
+        android:id="@+id/reset_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/start_timer"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/black"
+        android:text="Reset Timer"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>
